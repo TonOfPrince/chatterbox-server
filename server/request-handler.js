@@ -11,6 +11,7 @@ this file and include it in basic-server.js so that it actually works.
 *Hint* Check out the node module documentation at http://nodejs.org/api/modules.html.
 
 **************************************************************/
+var http = require("http");
 
 var requestHandler = function(request, response) {
   // Request and Response come from node's http module.
@@ -54,6 +55,8 @@ var requestHandler = function(request, response) {
   // node to actually send all the data over to the client.
   response.end("Hello, World!");
 };
+
+exports.requestHandler = requestHandler;
 
 // These headers will allow Cross-Origin Resource Sharing (CORS).
 // This code allows this server to talk to websites that
