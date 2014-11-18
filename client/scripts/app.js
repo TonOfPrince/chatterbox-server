@@ -1,7 +1,10 @@
 // YOUR CODE HERE:
 
+
 var app;
 $(function() {
+  // var net = require('net');
+  // var client = new net.Socke
   app = {
 //TODO: The current 'addFriend' function just adds the class 'friend'
 //to all messages sent by the user
