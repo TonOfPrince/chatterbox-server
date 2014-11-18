@@ -38,7 +38,7 @@ var requestHandler = function(request, response) {
   }
 
   var headers = defaultCorsHeaders;
-  headers['Content-Type '] = 'application/JSON';
+  headers['Content-Type'] = 'application/JSON';
   response.writeHead(statusCode, headers);
   response.end(JSON.stringify({results: messages}));
 
