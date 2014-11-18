@@ -12,18 +12,15 @@ this file and include it in basic-server.js so that it actually works.
 
 **************************************************************/
 var http = require("http");
+var express = require("express");
 // var path = require("path");
 // var url = require("url");
 var messages = [];
-
+// var app = express();
 
 var requestHandler = function(request, response) {
 
   console.log('Serving request type ' + request.method + ' for url ' + request.url);
-
-  // var myPath = url.parse(request.url).pathname;
-  // var fullPath = path.join(process.cwd(), myPath);
-  // var results = [];
 
   var statusCode = 200;
 
@@ -44,6 +41,7 @@ var requestHandler = function(request, response) {
   headers['Content-Type '] = 'application/JSON';
   response.writeHead(statusCode, headers);
   response.end(JSON.stringify({results: messages}));
+
 
 };
 
