@@ -1,6 +1,6 @@
 /* Import node's http module: */
-var http = require("http");
 // var handler = require("./request-handler.js")
+// var http = require("http");
 var express = require("express")
 var app = express();
 //port
@@ -26,15 +26,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', function (req, res) {
-  console.log('Serving request type ' + req.method + ' for url ' + req.url);
-  res.end({results: messages});
 
-});
 app.get('/classes/:room', function (req, res) {
   console.log('Serving request type ' + req.method + ' for url ' + req.url);
   res.end(JSON.stringify({results: messages}));
-
 });
 app.post('/classes/:room', function (req, res) {
   console.log('Serving request type ' + req.method + ' for url ' + req.url);
